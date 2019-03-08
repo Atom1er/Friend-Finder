@@ -1,0 +1,28 @@
+p{
+    color: beige;
+}
+#bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#options-0{
+    width: 100%;
+    margin: auto;
+}
+
+#title{
+    margin: 25px 20px;
+}
+
+.welcomHead{
+    /* background-color: burlywood; */
+    opacity: 0.75;
+}
+.welcomContent{
+    color: black;
+}
