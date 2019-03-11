@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/main.js" defer></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- Bootstrap link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- <h3 id="title">Please file the form Below!</h3> -->
+    <img src="./images/background.jpg" id='bg' alt="bg">
+    <div class="container-fluid">
+        <div id="result"></div>
+    </div>
+    <div class="row">
+    <div class="col-6"><button type="button" class="btn btn-secondary"><a href="./survey.html" style="color:white">Survey</a></button></div>
+    <div class="col-6"><button type="button" class="btn btn-secondary float-right"> <a href="https://github.com/Atom1er/FriendFinder" style="color:white">GitHub Repo</a></button></div>
+    </div>
+
+    <script>
+        var friend = [];
+        var div = $('<div>');
+        $.get('/api/friend', (data, status) => {
+            console.log("Data: " + data + "\nStatus: " + status);
+            $('#result').css({
+                'background-color': 'white',
+                'margin': '15px',
+                'padding': '15px',
+                'border-radius': '15px',
+                'overflow': 'auto'
+            });
+            $('#result').html(JSON.stringify(data));
+        });
+
+    </script>
+</body>
+
+</html>

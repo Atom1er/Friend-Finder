@@ -8,189 +8,246 @@
     <title>Friend Finder</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./javascript/main.js" defer></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
+    <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- Bootstrap link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <h3 id="title">Please file the form Below!</h3>
+    <!-- <h3 id="title">Please file the form Below!</h3> -->
     <img src="./images/background.jpg" id='bg' alt="bg">
     <div class="mainContent">
-        <div class="container">
+        <div class="container content">
             <div class="row justify-content-center">
-                <div>
-                    <input type="text" class="form-control" placeholder="Name">
-                </div>
-                <div>
-                    <input type="email" class="form-control" placeholder="Photo link">
+                <div id="nameUrl">
+                    <p>Name</p>
+                    <span class="invalideEntry" id="nameError">This is required</span>
+                    <div class="input-group mb-3 justify-content-center">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <p>Photo</p>
+                    <span class="invalideEntry" id="photoError">This is required</span>
+                    <div class="input-group mb-3 justify-content-center">
+                        <input type="url" class="form-control" id="link" placeholder="Photo link">
+                    </div>
                 </div>
                 <div class="question-0 justify-content-center">
-                    <p>Question 1</p>
+                    <p>How do you react when you're given homework just before the weekend?</p>
                 </div>
                 <div class="input-group mb-3 firtsQuestion justify-content-center">
                     <div>
                         <select class="custom-select" id="options-0">
-                            <option selected>Choose...</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Raise your eyebrow</option>
+                            <option value="2">Sigh</option>
+                            <option value="3">Ummm</option>
+                            <option value="4">Clap</option>
+                            <option value="5">Push your desk over</option>
                         </select>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="question-1">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-1">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="question-2">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-2">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="question-3">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-3">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="question-4">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-4">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="question-5">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-5">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="question-6">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-6">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="question-7">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-7">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="question-8">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-8">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="question-9">
-                        <p>Question 1</p>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div>
-                            <select class="custom-select" id="options-9">
-                                <option selected>Choose...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
+                    <span class="invalideEntry" id="error0">This is required</span>
                 </div>
 
             </div>
             <div class="row justify-content-center">
-                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                <div class="question-1 justify-content-center">
+                    <p>What sort of snacks do you eat at the cinema?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-1">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Salty popcorn</option>
+                            <option value="2">Nachos</option>
+                            <option value="3">I just don't</option>
+                            <option value="4">Pick 'n' mix</option>
+                            <option value="5">EVERYTHING</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error1">This is required</span>
+                </div>
+
+                <div class="question-2 justify-content-center">
+                    <p>What's the best type of dog?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-2">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Schnauser</option>
+                            <option value="2">Labrador</option>
+                            <option value="3">I don't like dogs</option>
+                            <option value="4">One that does cool tricks</option>
+                            <option value="5">Bulldog</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error2">This is required</span>
+                </div>
+
+                <div class="question-3 justify-content-center">
+                    <p>What job do you see yourself having when you're older?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-3">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Billionaire computer genius</option>
+                            <option value="2">A spy with cool gadgets</option>
+                            <option value="3">I don't feel like working anymore</option>
+                            <option value="4">Dunno. Is superhero a job?</option>
+                            <option value="5">Demolition expert</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error3">This is required</span>
+                </div>
+
+                <div class="question-4 justify-content-center">
+                    <p>Where do you want to have your next birthday party?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-4">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Home with my loves one</option>
+                            <option value="2">Anywhere as long as there's cake</option>
+                            <option value="3">I don't like parties</option>
+                            <option value="4">A haunted house</option>
+                            <option value="5">In the garden</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error4">This is required</span>
+                </div>
+
+                <div class="question-5 justify-content-center">
+                    <p>How loudly can you burp?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-5">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Not that loud</option>
+                            <option value="2">I don't know. Quite loudly, I suppose.</option>
+                            <option value="3">Urgh, that's disgusting</option>
+                            <option value="4">I could make your ears ring</option>
+                            <option value="5">Louder than a tank going past a rock concert</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error5">This is required</span>
+                </div>
+
+                <div class="question-6 justify-content-center">
+                    <p>What would you rather do?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-6">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Eat a pizza</option>
+                            <option value="2">Play sports</option>
+                            <option value="3">Tidy that pile of old buttons away</option>
+                            <option value="4">Play Fortnite</option>
+                            <option value="5">Watch a movie</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error6">This is required</span>
+                </div>
+
+                <div class="question-7 justify-content-center">
+                    <p>How would friends describe your personality?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-7">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Chilled out</option>
+                            <option value="2">Mysterious</option>
+                            <option value="3">Don't know</option>
+                            <option value="4">Kind and generous</option>
+                            <option value="5">Grumpy</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error7">This is required</span>
+                </div>
+
+                <div class="question-8 justify-content-center">
+                    <p>When was the last time you read a book?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-8">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">At weekend</option>
+                            <option value="2">I'm reading right now</option>
+                            <option value="3">I d'ont read</option>
+                            <option value="4">This morning before I had breakfast</option>
+                            <option value="5">Twice a day</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error8">This is required</span>
+                </div>
+
+                <div class="question-9 justify-content-center">
+                    <p>Which celebrity would you most like to meet?</p>
+                </div>
+                <div class="input-group mb-3 justify-content-center">
+                    <div>
+                        <select class="custom-select" id="options-9">
+                            <option selected value="0">Choose...</option>
+                            <option value="1">Simon Cowell</option>
+                            <option value="2">Zoella</option>
+                            <option value="3">Anyone from Star Wars</option>
+                            <option value="4">Dennis</option>
+                            <option value="5">They are all sucks</option>
+                        </select>
+                    </div>
+                    <span class="invalideEntry" id="error9">This is required</span>
+                </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-primary" id="submit" data-toggle="modal"
+                    data-target="#responseModal">Submit</button>
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-4"><button type="button" id="apiResponse" class="btn btn-secondary">API response</button></div>
+            <div class="col-4 d-flex justify-content-center"> <button type="button" class="btn btn-secondary"><a href="./home.html" style="color:white">Home</a></button></div>
+            <div class="col-4"><button type="button" class="btn btn-secondary float-right"> <a href="https://github.com/Atom1er/FriendFinder" style="color:white">GitHub Repo</a></button></div>
+        </div>
+    </div>
+    <!-- Bootstrap Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="best_match">
+                        <div id="bm_name"></div>
+                        <div id="bm_photo"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

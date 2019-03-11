@@ -1,9 +1,6 @@
 var path = require('path');
 var friendList = require("../data/friends");
 
-var friendList = require('../data/friends.js');
-
-
 
 module.exports = function (app) {
     //  app.get("/tables", function(req, res) {
@@ -34,7 +31,6 @@ function bestMatch() {
     var total = 0;
     var lastEntry = friendList.length - 1;
     var friend = friendList.length - 1;
-    // console.log(lastEntry);
     console.log('FriendList :'+friendList);
     for (var i = 0; i < friend; i++) {
         total = 0;
@@ -47,12 +43,13 @@ function bestMatch() {
     console.log(scoreArray);
     var bestMatchVal = Math.min(...scoreArray);
     console.log('Lowest score :'+bestMatchVal);
-    var index;
+    var match = [];
     for(var i = 0; i < scoreArray.length ; i++){
-        if(scoreArray[i] === bestMatchVal){
-            index = i;
-            console.log('Best Match Index'+index);
+        if(scoreArray[i] == bestMatchVal){
+            match.push(friendList[i]);
+            console.log('Best Match Index :'+ i);
         }
     }
-    return index;
+    console.log('Best match Object :'+match);
+    return match;
 }

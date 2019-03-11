@@ -1,8 +1,12 @@
-p{
+body{
+    font-family: 'Pacifico', cursive;
+}
+
+    p{
     color: beige;
 }
-#bg{
-    position: absolute;
+    #bg{
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
@@ -10,19 +14,41 @@ p{
     height: 100%;
 }
 
-#options-0{
+    #options-0{
     width: 100%;
     margin: auto;
 }
 
-#title{
+    #title{
     margin: 25px 20px;
 }
 
-.welcomHead{
-    /* background-color: burlywood; */
-    opacity: 0.75;
-}
-.welcomContent{
+    .welcomContent{
     color: black;
+}
+
+    .content{
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 5px;
+    padding: 15px; 
+    font-family: 'Courgette', cursive;
+}
+
+    #nameUrl{
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+
+    select > option{
+    width: 80%;
+}
+
+.invalideEntry, #options-1, #options-2, #options-3, #options-4, #options-5, #options-6, #options-7, #options-8, #options-9{
+    display: block;
+}
+.invalideEntry{
+    margin-left: 5px;
+    color: red;
 }
